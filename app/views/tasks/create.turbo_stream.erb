@@ -1,0 +1,7 @@
+<%= turbo_stream.append "tasks-list",
+  partial: 'tasks/task',
+  locals: { task: @task } %>
+
+<%= turbo_stream.update "new-task",
+  partial: 'tasks/form',
+  locals: { task: Task.new } %>
