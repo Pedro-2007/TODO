@@ -11,17 +11,17 @@
 
     <% if task.completed %>
     <%= button_to "Uncheck",
-      task_path(task),
-      class: "tasks__item__button",
-      method: :patch,
-      params: { task: { completed: false } }
-    %>
+        task_path(task),
+        class: "tasks__item__button",
+        method: :patch,
+        params: { task: { completed: false } }
+      %>
     <% else %>
     <%= button_to "Check",
-      task_path(task),
-      class: "tasks__item__button",
-      method: :patch,
-      params: { task: { completed: true } }
-    %>
+        task_path(task),
+        class: "tasks__item__button",
+        method: :patch,
+        params: { task: { completed: true } }
+      %>
     <% end %>
 </li>
