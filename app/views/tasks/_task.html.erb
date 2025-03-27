@@ -1,0 +1,27 @@
+<li id="<%= dom_id(task) %>" class="<%= class_names("tasks__item", "tasks__item__completed": task.completed) %>">
+    <span class="tasks__item__description">
+        <%= task.description %>
+        <%= button_to "Delete",
+      task_path(task),
+      method: :delete,
+      form: {
+        class: "tasks__item__delete", data: { turbo_confirm: "Are you sure?" }
+      } %>
+    </span>
+
+    <% if task.completed %>
+    <%= button_to "Uncheck",
+      task_path(task),
+      class: "tasks__item__button",
+      method: :patch,
+      params: { task: { completed: false } }
+    %>
+    <% else %>
+    <%= button_to "Check",
+      task_path(task),
+      class: "tasks__item__button",
+      method: :patch,
+      params: { task: { completed: true } }
+    %>
+    <% end %>
+</li>

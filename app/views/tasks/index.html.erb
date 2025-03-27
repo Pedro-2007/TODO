@@ -1,0 +1,10 @@
+<h1>🚧 TODO List</h1>
+<hr />
+
+<ul id="tasks-list" class="tasks">
+    <%= render partial: "task", collection: @tasks %>
+</ul>
+
+<ul class="tasks" id="new-task">
+    <%= render partial: "form", locals: { task: Task.new } %>
+</ul>
