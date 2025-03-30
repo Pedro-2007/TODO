@@ -8,6 +8,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.create!(task_params)
   end
+
   def update
     @task.update!(task_params)
   end
@@ -23,6 +24,7 @@ class TasksController < ApplicationController
   end
 
   def task_params
+    # params => { task: { description: '' , completed: } }
     params.require(:task).permit(:description, :completed)
   end
 end

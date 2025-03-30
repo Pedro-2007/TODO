@@ -1,4 +1,8 @@
 <%= form_with(model: task, class: "tasks__item") do |form| %>
-<%= form.text_field :description, required: true, placeholder: "Enter description", autofocus: true %>
-<%= form.submit "Create", class: "tasks__item__button" %>
-<% end %>
+<div data-controller='placeholder'>
+    <%= form.text_field :description, required: true, placeholder: "Enter description", autofocus: true %>
+</div>
+<div data-controller='button'>
+    <%= form.submit "Create", class: "tasks__item__button" %>
+    <% end %>
+</div>

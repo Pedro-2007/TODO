@@ -1,8 +1,12 @@
-<h1>🚧 TODO List</h1>
-<hr />
+<div data-controller='index'>
+    <h1>
+        Lista de tarefas
+    </h1>
+</div>
+<hr>
 
 <ul id="tasks-list" class="tasks">
-    <%= render partial: "task", collection: @tasks %>
+    <%= render @tasks %>
 </ul>
 
 <ul class="tasks" id="new-task">

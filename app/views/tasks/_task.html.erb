@@ -5,19 +5,19 @@
       task_path(task),
       method: :delete,
       form: {
-        class: "tasks__item__delete", data: { turbo_confirm: "Are you sure?" }
+        class: "tasks__item__delete", data: { turbo_confirm: "Tem certeza?" }
       } %>
     </span>
 
     <% if task.completed %>
-    <%= button_to "Uncheck",
+    <%= button_to "Voltar ao trabalho",
         task_path(task),
         class: "tasks__item__button",
         method: :patch,
         params: { task: { completed: false } }
       %>
     <% else %>
-    <%= button_to "Check",
+    <%= button_to "pausar trabalhos",
         task_path(task),
         class: "tasks__item__button",
         method: :patch,
