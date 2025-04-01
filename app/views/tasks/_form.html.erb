@@ -1,6 +1,9 @@
 <%= form_with(model: task, class: "tasks__item") do |form| %>
 <div data-controller='placeholder'>
     <%= form.text_field :description, required: true, placeholder: "Enter description", autofocus: true %>
+    <div>
+        Restam 80 caracteres
+    </div>
 </div>
 <div data-controller='button'>
     <%= form.submit "Create", class: "tasks__item__button" %>
