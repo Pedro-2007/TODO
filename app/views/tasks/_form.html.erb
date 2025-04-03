@@ -1,8 +1,7 @@
 <%= form_with(model: task, class: "tasks__item") do |form| %>
-<div data-controller='placeholder'>
-    <%= form.text_field :description, required: true, placeholder: "Enter description", autofocus: true %>
-    <div>
-        Restam 80 caracteres
+<div data-controller='placeholder' data-placeholder-contador-value="20">
+    <%= form.text_area :description, required: true, placeholder: "Enter description", autofocus: true, data: {placeholder_target: "input"}%>
+    <div data-placeholder-target="counter">
     </div>
 </div>
 <div data-controller='button'>
